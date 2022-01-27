@@ -1,0 +1,30 @@
+/* Same style as in fCC */
+
+body {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+input[type=text], label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type=text] {
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    border: 2px solid #299;
+}
+
+input[type=submit] {
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 2em;
+}
