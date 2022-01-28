@@ -1,6 +1,22 @@
 const express = require("express");
 const app = express();
-require('dotenv').config()
+require('dotenv').config();
+
+app.get('/now', function(req, res, next) {
+    req.time = new Date().toString();
+    next();
+}, function(req, res, next) {
+    res.json({
+        "time": req.time
+    })
+})
+
+app.use(function(req, res, next) {
+    console.log("------------------");
+    console.log(req.method + ' ' + req.path + ' - ' + req.ip);
+    console.log("------------------");
+    next();
+})
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + '/view/index.html');
